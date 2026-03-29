@@ -353,6 +353,124 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 .ge-score{font-family:var(--fn-disp);font-size:52px;font-weight:700;color:var(--primary);}
 .ge-score-lbl{font-family:var(--fn-code);font-size:11px;color:var(--text-muted);letter-spacing:.12em;text-transform:uppercase;}
 .ge-row{display:flex;gap:10px;justify-content:center;margin-top:6px;}
+
+/* ─── PHONE RESPONSIVE (≤ 480px) ─── */
+@media(max-width:480px){
+
+  /* ── Loading screen ── */
+  .ld-logo{font-size:38px;}
+  .ld-bar{width:220px;}
+
+  /* ── Home screen ── */
+  .home-eyebrow{font-size:10px;letter-spacing:.14em;gap:8px;}
+  .home-eyebrow::before,.home-eyebrow::after{width:24px;}
+  .home-byline{font-size:18px;margin-bottom:16px;}
+  .home-desc{font-size:13px;margin-bottom:28px;padding:0 6px;}
+  .home-cta{font-size:14px;padding:13px 36px;margin-bottom:22px;}
+  .home-stats{flex-wrap:wrap;justify-content:center;gap:6px 0;}
+  .home-stat{border-right:none!important;padding:2px 10px;font-size:10px;}
+  .home-stat:not(:last-child){border-right:1px solid var(--border)!important;}
+
+  /* ── Mode select screen ── */
+  #mode-screen{padding:20px 14px;align-items:flex-start;}
+  .mode-wrap{gap:18px;}
+  .mode-title{font-size:24px;}
+  .mode-card{padding:18px 16px;gap:8px;}
+  .mode-card-label{font-size:16px;}
+  .mode-card-desc{font-size:12px;}
+
+  /* ── Commence screen ── */
+  .com-title{font-size:32px;}
+  .com-cta{font-size:15px;padding:14px 38px;}
+  .com-chips{gap:7px;}
+  .com-chip{font-size:12px;padding:8px 17px;}
+
+  /* ── Lobby screen ── */
+  .lobby-card{padding:18px 16px;}
+  .lobby-title{font-size:19px;}
+  .lobby-btns{flex-direction:column;width:100%;gap:8px;}
+  .btn-reroll{width:100%;justify-content:center;}
+  .btn-commence{width:100%;justify-content:center;font-size:14px;padding:13px 28px;}
+  .diff-filter{gap:5px;}
+  .diff-pill{font-size:10px;padding:5px 12px;}
+
+  /* ── App header ── */
+  #header{height:auto;min-height:48px;flex-wrap:wrap;padding:5px 10px;gap:5px;row-gap:5px;}
+  .logo{font-size:15px;gap:6px;}
+  .logo-chip{font-size:12px;padding:1px 6px;}
+  .logo-sub{display:none;}
+  /* Hide decorative separators on mobile — use wrapping instead */
+  .h-sep{display:none;}
+  /* Timer */
+  .timer-ico{display:none;}
+  .timer-inner{align-items:center;flex-direction:row;gap:6px;}
+  .timer-lbl{font-size:8px;letter-spacing:.1em;}
+  #timer-num{font-size:19px;}
+  /* Difficulty filter pills */
+  .hdiff-filter{gap:3px;}
+  .hdiff-pill{font-size:8.5px;padding:3px 8px;}
+  /* Header buttons */
+  .btn{font-size:10px;padding:5px 9px;letter-spacing:.04em;}
+  #new-prob-btn::before{content:'⟳';margin-right:3px;}
+  /* Make spacer push timer to far right before wrapping */
+  .h-spacer{order:5;}
+
+  /* ── Main split ── */
+  #main{grid-template-rows:auto 1fr;}
+  #prob-panel{max-height:42vh;padding:14px 14px;gap:13px;}
+  .prob-title{font-size:19px;}
+  .prob-desc{font-size:13px;}
+
+  /* ── Editor bar ── */
+  #editor-bar{height:auto;flex-wrap:wrap;padding:6px 10px;gap:5px;}
+  #editor-bar .lang-tag{font-size:11px;}
+
+  /* ── Results panel ── */
+  .tc-row{font-size:11px;gap:7px;}
+  .res-head{padding:8px 12px;}
+  #results-panel{max-height:200px;}
+
+  /* ── Solution drawer ── */
+  #sol-panel{top:0;height:100vh;width:100%!important;}
+  .sol-code-body{font-size:12px;padding:12px 12px;}
+
+  /* ── Time-up overlay ── */
+  .tu-box{padding:26px 22px;border-radius:10px;gap:12px;}
+  .tu-title{font-size:30px;}
+  .tu-sub{font-size:12.5px;}
+  .tu-row{flex-direction:column;gap:8px;}
+  .tu-row .btn{width:100%;justify-content:center;}
+
+  /* ── Gauntlet end overlay ── */
+  .ge-box{padding:28px 22px;border-radius:12px;}
+  .ge-title{font-size:28px;}
+  .ge-score{font-size:44px;}
+  .ge-sub{font-size:13px;}
+  .ge-row{flex-direction:column;gap:8px;}
+  .ge-row .btn{width:100%;justify-content:center;}
+
+  /* ── Admin modal ── */
+  #admin-modal{max-height:96vh;border-radius:9px;}
+  .adm-body{grid-template-columns:1fr;grid-template-rows:180px 1fr;}
+  .adm-sidebar{border-right:none;border-bottom:1px solid var(--border);max-height:180px;padding:10px;}
+  .adm-head{padding:12px 16px;}
+  .adm-title{font-size:15px;}
+  .adm-foot{padding:10px 14px;gap:6px;}
+  .adm-form{padding:14px 14px;}
+
+  /* ── Toast ── */
+  #toast{left:14px;right:14px;bottom:14px;max-width:none;font-size:13px;}
+}
+
+/* ─── SMALL PHONE (≤ 380px) — extra squeeze ─── */
+@media(max-width:380px){
+  .home-title{font-size:52px;}
+  #header{padding:4px 8px;}
+  .btn{font-size:9px;padding:4px 8px;}
+  .hdiff-pill{font-size:7.5px;padding:3px 6px;}
+  #timer-num{font-size:17px;}
+  .prob-title{font-size:17px;}
+}
 </style>
 </head>
 <body>
@@ -629,7 +747,46 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/closebrackets.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/matchbrackets.min.js"></script>
-<script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
+<script>
+/* ================================================================
+   PYODIDE COMPATIBILITY PRE-PATCH  (runs before pyodide.js)
+   Fix A — DataCloneError / postMessage URL:
+     Pyodide 0.27.x passes URL objects through window.postMessage
+     during bootstrap. Safari / WebView / many mobile browsers
+     cannot structured-clone a URL object and throw
+     "DataCloneError: URL object could not be cloned."
+     We intercept postMessage and convert URL objects to href
+     strings so the clone succeeds.
+   Fix B — WASM instantiation:
+     0.27.x requires SharedArrayBuffer (cross-origin isolated).
+     We pin to 0.26.4 which works without it.
+================================================================ */
+(function(){
+  var _orig = window.postMessage.bind(window);
+  function sanitize(v,d){
+    if(d>12) return v;
+    if(v instanceof URL) return v.href;
+    if(v===null||typeof v!=='object') return v;
+    if(v instanceof ArrayBuffer||ArrayBuffer.isView(v)) return v;
+    if(typeof MessagePort!=='undefined'&&v instanceof MessagePort) return v;
+    if(typeof ImageBitmap!=='undefined'&&v instanceof ImageBitmap) return v;
+    if(Array.isArray(v)) return v.map(function(x){return sanitize(x,d+1);});
+    var o={},ks=Object.keys(v);
+    for(var i=0;i<ks.length;i++) o[ks[i]]=sanitize(v[ks[i]],d+1);
+    return o;
+  }
+  window.postMessage=function(data,origin,transfer){
+    try{ return _orig(data,origin,transfer); }
+    catch(e){
+      if(e instanceof DOMException&&e.name==='DataCloneError'){
+        try{ return _orig(sanitize(data,0),origin,transfer); }catch(_){}
+      }
+      throw e;
+    }
+  };
+})();
+</script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
 <script>
 /* ================================================================
    PROBLEM POOL  (27 problems — Logic × 19 + Patterns × 8)
@@ -1580,13 +1737,19 @@ function initEditor(){
 
 async function initPython(){
   try{
-    setLoadTxt('Loading Pyodide runtime...');
+    setLoadTxt('Loading Python runtime…');
     window.pyodide = await loadPyodide({
-      indexURL: "https://cdn.jsdelivr.net/pyodide/v0.27.0/full/"
+      indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.26.4/full/'
     });
     S.pythonReady=true;
     setLoadTxt('Ready!');
-  }catch(e){setLoadTxt('Pyodide runtime unavailable.');console.error(e);}
+  }catch(e){
+    console.error('Pyodide load error:',e);
+    S.pythonReady=false;
+    const ldTxt=document.getElementById('ld-txt');
+    ldTxt.textContent='Python runtime failed to load. Check your internet connection and refresh.';
+    ldTxt.style.color='#ef4444';
+  }
 }
 function setLoadTxt(t){document.getElementById('ld-txt').textContent=t;}
 
@@ -1649,7 +1812,7 @@ function resetCode(){if(!S.current)return;S.editor.setValue(S.current.starterCod
 ================================================================ */
 async function submitSolution(){
   dismissTimeUp();
-  if(!S.pythonReady){toast('Python runtime not ready','error');return;}
+  if(!S.pythonReady){toast('Python runtime unavailable — please refresh the page.','error');return;}
   if(!S.current)return;
   const code=S.editor.getValue().trim();
   if(!code){toast('Write some code first!','error');return;}
